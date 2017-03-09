@@ -1,22 +1,5 @@
 package io;
 
-public class MailerClassic {
-    public static void main(String[] args) {
-        Mailer mailer = new Mailer();
-
-        mailer.from("mike@ioindustres");
-        mailer.to("sarah@ioindustres");
-        mailer.subject("Your code really sucks");
-        mailer.body("sucks... sucks... sucks... ");
-
-        mailer.send();
-
-        System.out.println(">>>> this code has two problems");
-        System.out.println(">>>> first, there is a lot of noise... mailer, mailer, mailer, mailer");
-        System.out.println(">>>> second, we don't know if we can reuse the mailer object (bug vs resource wasting)");
-    }
-}
-
 class Mailer {
     public static void print(String msg) {
         System.out.println(msg);
@@ -40,5 +23,22 @@ class Mailer {
 
     public void send(){
         System.out.println("... Sending ... ");
+    }
+}
+
+public class MailerClassic {
+    public static void main(String[] args) {
+        Mailer mailer = new Mailer();
+
+        mailer.from("mike@ioindustres");
+        mailer.to("sarah@ioindustres");
+        mailer.subject("Your code really sucks");
+        mailer.body("sucks... sucks... sucks... ");
+
+        mailer.send();
+
+        System.out.println(">>>> this code has two problems");
+        System.out.println(">>>> first, there is a lot of noise... mailer, mailer, mailer, mailer");
+        System.out.println(">>>> second, we don't know if we can reuse the mailer object (bug vs resource wasting)");
     }
 }

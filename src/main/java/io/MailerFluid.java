@@ -1,21 +1,5 @@
 package io;
 
-
-public class MailerFluid {
-    public static void main(String[] args) {
-        new MailerV2()
-                .from("mike@ioindustres")
-                .to("sarah@ioindustres")
-                .subject("Your code really sucks")
-                .body("sucks... sucks... sucks... ")
-                .send();
-
-        System.out.println();
-        System.out.println(">>>> We eliminated the repetition and noise in the code, but we still do not know if we can reuse mailer objects");
-
-    }
-}
-
 class MailerV2 {
     public static void print(String msg) {
         System.out.println(msg);
@@ -47,3 +31,17 @@ class MailerV2 {
     }
 }
 
+public class MailerFluid {
+    public static void main(String[] args) {
+        new MailerV2()
+                .from("mike@ioindustres")
+                .to("sarah@ioindustres")
+                .subject("Your code really sucks")
+                .body("sucks... sucks... sucks... ")
+                .send();
+
+        System.out.println();
+        System.out.println(">>>> We eliminated the repetition and noise in the code, but we still do not know if we can reuse mailer objects");
+
+    }
+}
