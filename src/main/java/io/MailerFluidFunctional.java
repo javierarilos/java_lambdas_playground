@@ -27,11 +27,10 @@ class MailerV3 {
         return this;
     }
 
-    public static MailerV3 send(Consumer<MailerV3> mailerTransform) {
+    public static void send(Consumer<MailerV3> mailerTransform) {
         MailerV3 mailer = new MailerV3();
         mailerTransform.accept(mailer);
         System.out.println("... Sending ... ");
-        return mailer;
     }
 }
 

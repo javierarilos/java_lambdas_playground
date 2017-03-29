@@ -19,10 +19,10 @@ public class Resource {
 
     public static void main(String[] args) throws Throwable {
 
-        Resource resource = new Resource();
-        resource.op1();
-        resource.op2();
-        resource.close();
+            Resource resource = new Resource();
+            resource.op1();
+            resource.op2();
+            resource.close();
 
         System.out.println(">>> this code is working, but has two problems:");
         System.out.println(">>> first, it is easy to forget close");

@@ -2,6 +2,8 @@ package io;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.BiFunction;
 
 public class Iterators
 {
@@ -21,8 +23,25 @@ public class Iterators
             System.out.println(current);
         }
 
-        System.out.println( "----- INTERNAL ITERATOR" );
+        System.out.println( "----- INTERNAL ITERATOR with anonymous Consumer object" );
 
+        numbers.forEach(new Consumer<Integer>() {
+            @Override
+            public void accept(Integer n) {
+                System.out.println(n);
+            }
+        });
+
+        BiFunction<Integer, String, String> x = (Integer a, String b) -> {
+            String aString = "" + a;
+            return b + aString;
+        };
+
+        System.out.println(x.apply(88, "My age is: "));
+
+
+
+        System.out.println( "----- INTERNAL ITERATOR with LAMBDA" );
         numbers.forEach(n -> System.out.println(n));
 
         System.out.println( "----- INTERNAL ITERATOR: WITH METHOD REFERENCE" );
