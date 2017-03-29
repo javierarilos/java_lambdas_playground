@@ -277,6 +277,5 @@ public static void use(Consumer<ResourceExecuteAroundPattern> resourceOperations
 
 
 ---
-# THANK YOU FOR YOUR ATENTION!
-![thks](200w_d.gif)
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png
+# THAT'S ALL
+<img style="display: block; margin-left: auto; margin-right: auto; width:60%;height:60%;" src="200w_d.gif">
