@@ -1,6 +1,7 @@
 # "Functional" programming with Java 8
 
-Let's imagine we have to work with a list of numbers like this:
+
+
 
 ```java
 List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 0);
@@ -9,7 +10,7 @@ List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 0);
 
 # Iterating over a List
 
-We can iterate it differently in Java, the typical `for` loop:
+The typical **`for`** loop:
 
 ```Java
 for (int i = 0; i < numbers.length; i++) {
@@ -17,14 +18,14 @@ for (int i = 0; i < numbers.length; i++) {
 }
 ```
 
-In Java 5, this kind of loop was improved with the `foreach` loop:
+The **`foreach`** loop:
 ```Java
 for (int x : numbers) {
   System.out.println(x);
 }
 ```
 
-Both loops are known as `external loops`, since Java 8, Lists and other Iterable objects, have a `forEach` method that is known as an `internal loop`.
+Both loops are known as **`external loops`**, since Java 8, Lists and other Iterable objects, have a `forEach` method that is known as an `internal loop`.
 
 ---
 
